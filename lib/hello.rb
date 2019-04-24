@@ -1,5 +1,6 @@
 def hello_t(passed_in)
-  block_given? ? passed_in.each {|i| yield i} : puts "try again" end
+  passed_in.each {|i| yield i}
+
 end
 
 # call your method here!
