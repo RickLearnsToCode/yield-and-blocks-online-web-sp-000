@@ -1,6 +1,5 @@
 def hello_t(passed_in)
-  passed_in.each {|i| yield(i)}
-
+  block_given? ? passed_in.each {|i| yield(i)} : return nil
 end
 
 # call your method here!
