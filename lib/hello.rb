@@ -1,5 +1,8 @@
 def hello_t(passed_in)
-  passed_in.each {|i| yield i}
+  if block_given?
+    passed_in.each {|i| yield i}
+  else 
+    puts "No block given"
 
 end
 
